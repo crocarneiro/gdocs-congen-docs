@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Material Docs</title>
+    <link>https://example.org/</link>
+    <description>Recent content on Material Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introdução</title>
+      <link>https://example.org/getting-started/</link>
+      <pubDate>Fri, 19 Nov 2021 09:01:18 -0300</pubDate>
+      
+      <guid>https://example.org/getting-started/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Barra de Ferramentas</title>
+      <link>https://example.org/toolbar/</link>
+      <pubDate>Fri, 19 Nov 2021 10:50:05 -0300</pubDate>
+      
+      <guid>https://example.org/toolbar/</guid>
+      <description>Introdução A barra de ferramentas é a barra que encontramos no topo da barra lateral da nossa extensão. Nela temos as opções necessárias para &amp;ldquo;formatar&amp;rdquo; nosso layout. Por enquanto temos duas ferramentas disponíveis:
+ Foreach: Blocos de repetição. Format functions: Funções de formatação de dados.  Format function Essa opção serve para criarmos funções de formatação para nossos dados. Todas as funções de formatação são funções em javascript que recebem um único parâmetro (value).</description>
+    </item>
+    
+    <item>
+      <title>Demonstrações</title>
+      <link>https://example.org/demos/</link>
+      <pubDate>Fri, 19 Nov 2021 16:09:32 -0300</pubDate>
+      
+      <guid>https://example.org/demos/</guid>
+      <description>Demo 001 | 06/11/2021 | Demonstração de Usabilidade OBS: Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: https://youtu.be/7b4Vj0ZL9JY.</description>
+    </item>
+    
+  </channel>
+</rss>
