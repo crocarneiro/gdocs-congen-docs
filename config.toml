@@ -15,7 +15,7 @@ googleAnalytics = ""
 
 	# Repository
 	provider = "GitHub"
-	repo_url = "https://github.com/digitalcraftsman/hugo-material-docs"
+	repo_url = "https://github.com/crocarneiro/gdocs-congen"
 
 	version = "1.0.0"
 	logo = "images/logo.png"
@@ -55,9 +55,14 @@ googleAnalytics = ""
 	weight = 20
 
 [[menu.main]]
+	name   = "Arquitetura"
+	url    = "architecture/"
+	weight = 30
+
+[[menu.main]]
 	name   = "Demonstrações"
 	url    = "demos/"
-	weight = 30
+	weight = 40
 
 
 [blackfriday]

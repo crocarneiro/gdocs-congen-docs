@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Material Docs</title>
+    <title>Arquitetura - Material Docs</title>
     <meta name="generator" content="Hugo 0.89.4" />
 
     
     <meta name="description" content="A material design theme for documentations.">
     
-    <link rel="canonical" href="https://crocarneiro.github.io/gdocs-congen-docs/">
+    <link rel="canonical" href="https://crocarneiro.github.io/gdocs-congen-docs/architecture/">
     
     <meta name="author" content="Digitalcraftsman">
     
 
-    <meta property="og:url" content="https://crocarneiro.github.io/gdocs-congen-docs/">
+    <meta property="og:url" content="https://crocarneiro.github.io/gdocs-congen-docs/architecture/">
     <meta property="og:title" content="Material Docs">
     <meta property="og:image" content="https://crocarneiro.github.io/gdocs-congen-docs/images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Material Docs">
@@ -69,9 +69,6 @@
     <script src="https://crocarneiro.github.io/gdocs-congen-docs/javascripts/modernizr.js"></script>
 
     
-    <link href="https://crocarneiro.github.io/gdocs-congen-docs/index.xml" rel="alternate" type="application/rss+xml" title="Material Docs" />
-    <link href="https://crocarneiro.github.io/gdocs-congen-docs/index.xml" rel="feed" type="application/rss+xml" title="Material Docs" />
-    
 
   </head>
   <body class="palette-primary-red palette-accent-teal">
@@ -100,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        Material Docs
+        Arquitetura
       </div>
     </div>
 
@@ -219,11 +216,14 @@
 
 
 
-<a  title="Arquitetura" href="https://crocarneiro.github.io/gdocs-congen-docs/architecture/">
+<a class="current" title="Arquitetura" href="https://crocarneiro.github.io/gdocs-congen-docs/architecture/">
 	
 	Arquitetura
 </a>
 
+
+<ul id="scrollspy">
+</ul>
 
 
   
@@ -284,7 +284,27 @@
 
 	<article class="article">
 		<div class="wrapper">
-			
+			<h1>Arquitetura </h1>
+
+			<p>Aqui nessa página explicarei um pouco da arquitetura da solução, as tecnologias que foram usadas para desenvolvê-la e vou fazer um passo a passo de como configurar um ambiente de desenvolvimento.</p>
+<p>O primeiro protótipo que eu fiz era extremamente simples. Era composto de apenas 3 arquivos, um arquivo .html com o layout da barra lateral, um arquivo .js com o código em javascript da barra lateral e um arquivo .gs com o código em AppsScript para gerar os arquivos (que é a mesma coisa que javascript bem dizer). Ou seja, não havia mistério algum. Porém, a solução final tem um nível de complexidade muito mais alto. Isso exigiu que se utilizasse mais tecnologias, sem as quais não seria possível fazer o que foi feito. Na solução final foram utilizadas as seguintes tecnologias:</p>
+<ul>
+<li>HTML, javascript e CSS (conforme o esperado)</li>
+<li><a href="https://pt-br.reactjs.org/">React</a></li>
+<li><a href="https://mui.com/">Material UI</a></li>
+<li><a href="https://github.com/enuchi/React-Google-Apps-Script">React-Google-Apps-Script</a>: Um template para desenvolver AppsScripts com React.</li>
+<li>Java e SpringBoot para o servidor.</li>
+</ul>
+<p>Sem citar com muitos detalhes todos os pacotes utilizados, foram essas as tecnologias usadas no desenvolvimento do gdocs-congen.</p>
+<p>Agora que eu citei as &ldquo;ferramentas&rdquo; usadas no projeto, vou falar das partes que compõe o projeto. Como assim &ldquo;partes&rdquo; se a única parte que deveria ter é um script para Google Docs? Em tese sim, mas na prática existem alguns detalhes técnicos que adicionam uma certa complexidade. Por exemplo, percebeu que citamos um &ldquo;servidor&rdquo;? Por que precisamos de um servidor? Bom, toda nossa solução se sustenta no fato de que podemos utilizar a <a href="https://superlogicaimobiliarias.docs.apiary.io/#">API do Super Lógica Imobiliárias</a> né? Pois então, existe uma medida de segurança que os navegadores (Chrome, Firefox, Safari, etc) implementam que é conhecida como <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a> que meio que não nos permite fazer chamadas diretamente para a API de &ldquo;dentro&rdquo; do navegador, porque o domínio da nossa extensão e o domínio da API do Super Lógica são diferentes e a API deles não tem nenhuma exeção para CORS. Para resolver esse problema foi desenvolvido um webservice, uma API, que serve simplesmente para fazer requisições para o Super Lógica e mandar de volta para o nosso AppsScript. O diagrama abaixo ilustra bem essa situação:</p>
+<p><img src="https://crocarneiro.github.io/gdocs-congen-docs/images/extension_communication_structure.png" alt="estrutura de comunicação do gdocs-congen"></p>
+<p>O código da API fica em um repositório separado do código do script, e essa documentação aqui também é um repositório separado. Então ao todo temos 3 repositórios:</p>
+<ol>
+<li>gdocs-congen: Repositório principal, armazena o código do AppsScript e mantém 98% da complexidade do negócio.</li>
+<li>gdocs-congen-ws: Repositório referente ao webservice criado para fazer a ponte entre o gdocs-congen e a API do Super Lógica.</li>
+<li>gdocs-congen-docs: Repositório que armazena essa documentação aqui.</li>
+</ol>
+
 
 			<aside class="copyright" role="note">
 				
@@ -299,23 +319,37 @@
 			<footer class="footer">
 				
 
-
-
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
+  
+      <a href="https://crocarneiro.github.io/gdocs-congen-docs/demos/" title="Demonstrações">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Demonstrações
+            </div>
+          </div>
+        </div>
+      </a>
+  
   </div>
 
-  
-  
   <div class="next">
-      <a href="https://crocarneiro.github.io/gdocs-congen-docs/" title="Material Docs">
+  
+      <a href="https://crocarneiro.github.io/gdocs-congen-docs/toolbar/" title="Barra de Ferramentas">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              Material Docs
+              Barra de Ferramentas
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
@@ -323,8 +357,11 @@
           </div>
         </div>
       </a>
+  
   </div>
 </nav>
+
+
 
 
 

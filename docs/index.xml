@@ -12,7 +12,8 @@
       <pubDate>Fri, 19 Nov 2021 09:01:18 -0300</pubDate>
       
       <guid>https://crocarneiro.github.io/gdocs-congen-docs/getting-started/</guid>
-      <description></description>
+      <description>Essa é a documentação referente ao script para Google Docs desenvolvido a fim de permitir a criação de modelos de contrato e a posterior geração de contratos a partir do modelo. Para fins de identificação, foi dado o nome &amp;ldquo;gdocs-congen&amp;rdquo; para o projeto. Então os artefatos (código fonte, documentação) do projeto são identificados a partir desse nome.
+O primeiro passo para quem está vendo essa documentação e usando o script pela primeira vez, é ver as demonstração disponíveis aqui.</description>
     </item>
     
     <item>
@@ -26,12 +27,23 @@
     </item>
     
     <item>
+      <title>Arquitetura</title>
+      <link>https://crocarneiro.github.io/gdocs-congen-docs/architecture/</link>
+      <pubDate>Wed, 24 Nov 2021 09:52:12 -0300</pubDate>
+      
+      <guid>https://crocarneiro.github.io/gdocs-congen-docs/architecture/</guid>
+      <description>Aqui nessa página explicarei um pouco da arquitetura da solução, as tecnologias que foram usadas para desenvolvê-la e vou fazer um passo a passo de como configurar um ambiente de desenvolvimento.
+O primeiro protótipo que eu fiz era extremamente simples. Era composto de apenas 3 arquivos, um arquivo .html com o layout da barra lateral, um arquivo .js com o código em javascript da barra lateral e um arquivo .gs com o código em AppsScript para gerar os arquivos (que é a mesma coisa que javascript bem dizer).</description>
+    </item>
+    
+    <item>
       <title>Demonstrações</title>
       <link>https://crocarneiro.github.io/gdocs-congen-docs/demos/</link>
       <pubDate>Fri, 19 Nov 2021 16:09:32 -0300</pubDate>
       
       <guid>https://crocarneiro.github.io/gdocs-congen-docs/demos/</guid>
-      <description>Demo 001 | 06/11/2021 | Demonstração de Usabilidade OBS: Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: https://youtu.be/7b4Vj0ZL9JY.</description>
+      <description>Demo 001 | 06/11/2021 Essa é a primeira demonstração do script. É uma demonstração de usabilidade apenas, não contempla nenhum aspecto técnico. Os principais tópicos dessa demonstração são:
+ Como iniciar o script Cadastrando os modelos: Inserindo campos simples. Cadastrando os modelos: Inserindo campos compostos. Cadastrando os modelos: Inserindo campos compostos dentro de um bloco de repetição (foreach). Inconsistências, tratamento de dados e formatação de campos.  Vídeo   OBS: Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: https://youtu.</description>
     </item>
     
   </channel>

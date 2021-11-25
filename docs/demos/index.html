@@ -130,7 +130,7 @@
 <main class="main">
 	<div class="drawer">
 		<nav aria-label="Navigation">
-  <a href="https://github.com/digitalcraftsman/hugo-material-docs" class="project">
+  <a href="https://github.com/crocarneiro/gdocs-congen" class="project">
     <div class="banner">
       
         <div class="logo">
@@ -141,7 +141,7 @@
         <strong>Material Docs <span class="version">1.0.0</span></strong>
         
           <br>
-          digitalcraftsman/hugo-material-docs
+          crocarneiro/gdocs-congen
         
       </div>
     </div>
@@ -152,12 +152,12 @@
       
         <ul class="repo">
           <li class="repo-download">
-            <a href="https://github.com/digitalcraftsman/hugo-material-docs/archive/master.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/crocarneiro/gdocs-congen/archive/master.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
           <li class="repo-stars">
-            <a href="https://github.com/digitalcraftsman/hugo-material-docs/stargazers" target="_blank" title="Stargazers" data-action="star">
+            <a href="https://github.com/crocarneiro/gdocs-congen/stargazers" target="_blank" title="Stargazers" data-action="star">
               <i class="icon icon-star"></i> Stars
               <span class="count">&ndash;</span>
             </a>
@@ -201,6 +201,24 @@
 <a  title="Barra de Ferramentas" href="https://crocarneiro.github.io/gdocs-congen-docs/toolbar/">
 	
 	Barra de Ferramentas
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Arquitetura" href="https://crocarneiro.github.io/gdocs-congen-docs/architecture/">
+	
+	Arquitetura
 </a>
 
 
@@ -268,11 +286,77 @@
 		<div class="wrapper">
 			<h1>Demonstrações </h1>
 
-			<h2 id="demo-001--06112021--demonstração-de-usabilidade">Demo 001 | 06/11/2021 | Demonstração de Usabilidade</h2>
+			<h2 id="demo-001--06112021">Demo 001 | 06/11/2021</h2>
+<p>Essa é a primeira demonstração do script. É uma demonstração de usabilidade apenas, não contempla nenhum aspecto técnico. Os principais tópicos dessa demonstração são:</p>
+<ul>
+<li>Como iniciar o script</li>
+<li>Cadastrando os modelos: Inserindo campos simples.</li>
+<li>Cadastrando os modelos: Inserindo campos compostos.</li>
+<li>Cadastrando os modelos: Inserindo campos compostos dentro de um bloco de repetição (foreach).</li>
+<li>Inconsistências, tratamento de dados e formatação de campos.</li>
+</ul>
+<h3 id="vídeo">Vídeo</h3>
 
-<iframe width="560" height="315" src="https://youtu.be/7b4Vj0ZL9JY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/7b4Vj0ZL9JY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
 
 <p><strong>OBS:</strong> Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: <a href="https://youtu.be/7b4Vj0ZL9JY">https://youtu.be/7b4Vj0ZL9JY</a>.</p>
+<p>Vou colocar aqui embaixo o feedback recebido nessa primeira demonstração, pois ele é importante para entender alguns tópicos da segunda demonstração:</p>
+<h4 id="bigdu--09112021">bigdu — 09/11/2021</h4>
+<blockquote>
+<p><strong>Considerações:</strong></p>
+</blockquote>
+<blockquote>
+<p>Primeiramente está ficando muito bom e estou muito impressionado, parabéns mesmo! A solução for each foi pica, caiu uma lágrima aqui!</p>
+</blockquote>
+<blockquote>
+<p>Segue minhas considerações:</p>
+</blockquote>
+<blockquote>
+<p>Na tela de gerar contrato, inserir um elemento visual “loading”, rodando após o usuário apertar gerar contrato, para que ele saiba que o script esta rodando. Ou algo do tipo.</p>
+</blockquote>
+<blockquote>
+<p>Na barra lateral onde escolhemos os campos, seria incrível se pudéssemos exibir, de alguma forma, o valor do campo, um exemplo, do que viria da api. Tenho várias ideias de execução. Poderia ter um icone de “?” para cada campo que ao clicar aparecesse o exemplo.Ou deixar o mouse parado em cima do campo e surgisse um balao com o valor daquele campo. Esses valores viriam deste contrato id 65. Eu popularia todo ele com dados para que aparecesse aí nesses exemplos. Nao sei se pesaria muito</p>
+</blockquote>
+<blockquote>
+<p>Inserir um indicador se o script carregou ok ou se deu erro, na primeira vez que a gente abrir. Por exemplo, o token pode dar erro, ou expirar um dia. Podia dar um aviso caso isso acontecesse. Esse teste poderia ocorrer toda vez que desse o start.
+Inconsistência Dados e Tratamento de dados e Nomes por extenso</p>
+</blockquote>
+<blockquote>
+<p><strong>Você comentou no vídeo sobre estes assuntos vou dar um feedback.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>Inconsistência Dados:</strong> Este tópico não é tão problemático. O pessoal daqui pode padronizar a forma de como escrever na API com acentos e tudo mais.</p>
+</blockquote>
+<blockquote>
+<p><strong>Tratamento de dados:</strong> Este tópico é crucial… Realmente a gente não pensou nisso. É preciso verificar como os dados são escritos no Sistema. Penso que não será preciso tratar os dados para tudo, apenas alguns específicos. Eu precisava testar a ferramenta e enumerar quais seriam fundamentais. Por exemplo, apareceu o número 2 no campo de estado civil ao invés de aparecer “casado” ou “solteiro”. De repente 2 é como o ingaia salva o estado civil pois é um campo com valor fixo, imutavel, não é uma string, daí os programadores deles devem ter decidido fazer assim. Nesses casos precisamos tratar isso para jogar o texto que deveria ser, caso venha 2 como valor. No gerador de contratos dele vem o nome ao invés do número. Outro caso é os dados de CPF e CNPJ. A ferramenta precisava ler os numeros e escrever com pontos. Eu tenho um script no google que eu resolvi essas questoes de tratamento usando REGEX. Eu posso ajudar nisso.</p>
+</blockquote>
+<blockquote>
+<p><strong>Números por extenso:</strong> Uma vez eu queria fazer isso do nada. Eu fiz uma mega pesquisa e voce acredita que eu encontrei um script no proprio App Script que fazia exatamente isso no google Sheets. Será que voce consegue implementar? Ele escreve não só o número, mas também a ordem dele, “centena”, “mil”, “centavos”. Poderia ter uma opção na tag, para dizer ao script que aquele valor precisa ser retornado por extenso, passando o valor para esta funcionalidade.</p>
+</blockquote>
+<h2 id="demo-002--22112021">Demo 002 | 22/11/2021</h2>
+<p>Essa demo contempla as melhorias que foram feitas em resposta ao feedback da primeira demo:</p>
+<ul>
+<li>Alterações visuais:
+<ul>
+<li>Remoção do título</li>
+<li>Criação da <a href="https://crocarneiro.github.io/gdocs-congen-docs/toolbar">toolbar</a></li>
+<li>Moção do botão foreach para dentro da <a href="https://crocarneiro.github.io/gdocs-congen-docs/toolbar">toolbar</a>.</li>
+</ul>
+</li>
+<li>Possibilidade de visualizar o valor dos campos que constam no contrato de ID 65.</li>
+<li>Possibilidade de criar <a href="https://crocarneiro.github.io/gdocs-congen-docs/toolbar/#format-function">funções de formatação</a>.</li>
+</ul>
+<p>Para mais detalhes sobre a toolbar <a href="https://crocarneiro.github.io/gdocs-congen-docs/toolbar">clique aqui</a>.</p>
+<h3 id="vídeo-1">Vídeo</h3>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/CFosIwk36Ag" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><strong>OBS:</strong> Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: <a href="https://youtu.be/CFosIwk36Ag">https://youtu.be/CFosIwk36Ag</a>.</p>
+<p>Para ver as considerações referentes a segunda demonstração baixe o PDF clicando <a href="https://crocarneiro.github.io/gdocs-congen-docs/files/Consideracoes_Demo_02_.pdf">aqui</a>.</p>
 
 
 			<aside class="copyright" role="note">
@@ -295,14 +379,14 @@
 
   <div class="next">
   
-      <a href="https://crocarneiro.github.io/gdocs-congen-docs/toolbar/" title="Barra de Ferramentas">
+      <a href="https://crocarneiro.github.io/gdocs-congen-docs/architecture/" title="Arquitetura">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              Barra de Ferramentas
+              Arquitetura
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
@@ -335,7 +419,7 @@
     <script>
     
       var base_url = 'https:\/\/crocarneiro.github.io\/gdocs-congen-docs\/';
-      var repo_id  = 'digitalcraftsman\/hugo-material-docs';
+      var repo_id  = 'crocarneiro\/gdocs-congen';
     
     </script>
 
