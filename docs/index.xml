@@ -32,8 +32,8 @@ O primeiro passo para quem está vendo essa documentação e usando o script pel
       <pubDate>Wed, 24 Nov 2021 09:52:12 -0300</pubDate>
       
       <guid>https://crocarneiro.github.io/gdocs-congen-docs/architecture/</guid>
-      <description>Aqui nessa página explicarei um pouco da arquitetura da solução, as tecnologias que foram usadas para desenvolvê-la e vou fazer um passo a passo de como configurar um ambiente de desenvolvimento.
-O primeiro protótipo que eu fiz era extremamente simples. Era composto de apenas 3 arquivos, um arquivo .html com o layout da barra lateral, um arquivo .js com o código em javascript da barra lateral e um arquivo .gs com o código em AppsScript para gerar os arquivos (que é a mesma coisa que javascript bem dizer).</description>
+      <description>Introdução Aqui nessa página explicarei um pouco da arquitetura da solução, as tecnologias que foram usadas para desenvolvê-la e vou fazer um passo a passo de como configurar um ambiente de desenvolvimento.
+O primeiro protótipo que eu fiz era extremamente simples. Era composto de apenas 3 arquivos, um arquivo .html com o layout da barra lateral, um arquivo .js com o código em javascript da barra lateral e um arquivo .</description>
     </item>
     
     <item>

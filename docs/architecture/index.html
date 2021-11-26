@@ -286,7 +286,8 @@
 		<div class="wrapper">
 			<h1>Arquitetura </h1>
 
-			<p>Aqui nessa página explicarei um pouco da arquitetura da solução, as tecnologias que foram usadas para desenvolvê-la e vou fazer um passo a passo de como configurar um ambiente de desenvolvimento.</p>
+			<h2 id="introdução">Introdução</h2>
+<p>Aqui nessa página explicarei um pouco da arquitetura da solução, as tecnologias que foram usadas para desenvolvê-la e vou fazer um passo a passo de como configurar um ambiente de desenvolvimento.</p>
 <p>O primeiro protótipo que eu fiz era extremamente simples. Era composto de apenas 3 arquivos, um arquivo .html com o layout da barra lateral, um arquivo .js com o código em javascript da barra lateral e um arquivo .gs com o código em AppsScript para gerar os arquivos (que é a mesma coisa que javascript bem dizer). Ou seja, não havia mistério algum. Porém, a solução final tem um nível de complexidade muito mais alto. Isso exigiu que se utilizasse mais tecnologias, sem as quais não seria possível fazer o que foi feito. Na solução final foram utilizadas as seguintes tecnologias:</p>
 <ul>
 <li>HTML, javascript e CSS (conforme o esperado)</li>
@@ -304,6 +305,67 @@
 <li>gdocs-congen-ws: Repositório referente ao webservice criado para fazer a ponte entre o gdocs-congen e a API do Super Lógica.</li>
 <li>gdocs-congen-docs: Repositório que armazena essa documentação aqui.</li>
 </ol>
+<h2 id="acesso-aos-repositórios">Acesso aos repositórios</h2>
+<p>Para ter acesso ao código-fonte, o jeito mais fácil é criando uma conta no <a href="https://github.com/">Github</a> e me passando o nome de usuário. Dessa forma eu consigo liberar acesso ao repositório para você e você consegue fazer uma cópia dele para sua própria conta. Dessa forma você também tem acesso à todas as atualizações que eu for fazendo.</p>
+<p>Após criar sua conta no Github, veja o vídeo abaixo para ver quais são os próximos passos:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/RkevRuTqsNo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><strong>OBS:</strong> Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: <a href="https://youtu.be/RkevRuTqsNo">https://youtu.be/RkevRuTqsNo</a>.</p>
+<h2 id="ambiente-de-desenvolvimento">Ambiente de desenvolvimento</h2>
+<p>Não vou entrar nos detalhes do ambiente de desenvolvimento do servidor em Java, porque provavelmente vocês não vão precisar alterar ele, até porque ele já faz o que deveria fazer. Vou falar do ambiente de desenvolvimento para o AppsScript em si, que é o principal.</p>
+<h3 id="dependências">Dependências</h3>
+<p>Para trabalhar com ele é preciso fazer a instalação de algumas ferramentas:</p>
+<ul>
+<li><a href="https://nodejs.org/en/">NodeJS</a>: Recomendo a instalação da versão LTS.</li>
+<li><a href="https://developers.google.com/apps-script/guides/clasp">clasp</a>: Essa é a linha de comando do Google. Depois de ter instalado o node, basta rodar o seguinte comando para instalar o clasp: <code>npm install @google/clasp -g</code>
+<ul>
+<li>É necessário fazer login no clasp com o comando <code>clasp login</code>. O login deve ser feito na conta que se quer instalar o script.</li>
+</ul>
+</li>
+</ul>
+<p>E a princípio é só isso.</p>
+<h2 id="deploy-do-script">Deploy do script</h2>
+<p>Com deploy queremos dizer &ldquo;instalar o script em algum documento do Google&rdquo;. Para fazer isso precisamos seguir algumas etapas:</p>
+<ol>
+<li>Criar um documento do Google. Criar um script atrelado a ele e copiar o ID desse script.</li>
+</ol>
+<p><img src="https://crocarneiro.github.io/gdocs-congen-docs/images/2021-11-26-10_54_21-Window.png" alt="passo1">
+<img src="https://crocarneiro.github.io/gdocs-congen-docs/images/2021-11-26-10_57_42-Window.png" alt="passo2">
+<img src="https://crocarneiro.github.io/gdocs-congen-docs/images/2021-11-26-10_58_58-Window.png" alt="passo3"></p>
+<ol start="2">
+<li>Dentro da pasta raiz do repositório &ldquo;gdocs-congen&rdquo;, devemos criar um arquivo chamado &ldquo;.clasp.json&rdquo;. Esse arquivo vai ter dentro de si o seguinte conteúdo:</li>
+</ol>
+<pre tabindex="0"><code>{&quot;scriptId&quot;:&quot;id_do_script&quot;,&quot;rootDir&quot;:&quot;dist&quot;}
+</code></pre><p>No seu arquivo, você vai substituir o texto &ldquo;id_do_script&rdquo; pelo ID do seu script recém criado.</p>
+<ol start="3">
+<li>Depois, basta rodar os comandos <code>npm install</code> e <code>npm run deploy</code> na pasta raiz do diretório &ldquo;gdocs-congen&rdquo; que o script será compilado e o upload do resultado será feito para dentro do script recém criado.</li>
+</ol>
+<p><strong>Após estas etapas o menu &ldquo;Gerador de Contratos&rdquo; já deve aparecer no documento criado.</strong></p>
+<h2 id="deploy-do-servidor">Deploy do servidor</h2>
+<p>Existem várias opções disponíveis quando falamos em hospedagem de servidores java. Nesse caso eu vou recomendar que se use o <a href="https://www.heroku.com/">Heroku</a>, por ser uma solução gratuita e bem simples de se utilizar.</p>
+<p>Após criar sua conta no Heroku, veja o vídeo abaixo para fazer os próximos passos:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/uq3s-RL_Fus" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><strong>OBS:</strong> Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: <a href="https://youtu.be/uq3s-RL_Fus">https://youtu.be/uq3s-RL_Fus</a>.</p>
+<h2 id="configuração-do-script">Configuração do script</h2>
+<p>Ao executar o script pela primeira vez é necessário configurá-lo para que ele funcione corretamente. Essa configuração consiste em informar 3 variáveis:</p>
+<ul>
+<li><strong>URL do backend:</strong> URL do servidor em java cujo deploy foi feito na plataforma Heroku.</li>
+<li><strong>app_token:</strong> Da API do Super Lógica</li>
+<li><strong>access_token:</strong> Da API do Super Lógica</li>
+</ul>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/XPklr-fdXlE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p><strong>OBS:</strong> Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: <a href="https://youtu.be/XPklr-fdXlE">https://youtu.be/XPklr-fdXlE</a>.</p>
 
 
 			<aside class="copyright" role="note">

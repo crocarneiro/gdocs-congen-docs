@@ -62,3 +62,36 @@ Para mais detalhes sobre a toolbar [clique aqui](/toolbar).
 
 
 Para ver as considerações referentes a segunda demonstração baixe o PDF clicando [aqui](/files/Consideracoes_Demo_02_.pdf).
+
+## Demo 003 | 26/11/2021
+Essa demo mostra como fazer para ter acesso aos repositórios que contém o código fonte da aplicação. Para mais detalhes veja a página sobre [arquitetura](/architecture).
+
+### Vídeo
+{{<youtube id="RkevRuTqsNo" >}}
+
+**OBS:** Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: [https://youtu.be/RkevRuTqsNo](https://youtu.be/RkevRuTqsNo).
+
+## Demo 004 | 26/11/2021
+Essa demo mostra como fazer o deploy do webservice na plataforma Heroku. Para mais detalhes veja a página sobre [arquitetura](/architecture/#deploy-do-servidor).
+
+### Vídeo
+{{<youtube id="uq3s-RL_Fus" >}}
+
+**OBS:** Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: [https://youtu.be/uq3s-RL_Fus](https://youtu.be/uq3s-RL_Fus).
+
+
+
+## Demo 005 | 26/11/2021
+Essa demo mostra como fazer a configuração do script para que o mesmo funcione corretamente. Para mais detalhes veja a página sobre [arquitetura](/architecture/#deploy-do-servidor).
+
+Basicamente fala das 3 variáveis necessárias para que o app funcione corretamente:
+* **URL do backend:** URL do servidor em java cujo deploy foi feito na plataforma Heroku.
+* **app_token:** Da API do Super Lógica
+* **access_token:** Da API do Super Lógica
+
+### Vídeo
+{{<youtube id="XPklr-fdXlE" >}}
+
+**OBS:** Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: [https://youtu.be/XPklr-fdXlE](https://youtu.be/XPklr-fdXlE).
+
+
