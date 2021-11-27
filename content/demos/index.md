@@ -79,8 +79,6 @@ Essa demo mostra como fazer o deploy do webservice na plataforma Heroku. Para ma
 
 **OBS:** Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: [https://youtu.be/uq3s-RL_Fus](https://youtu.be/uq3s-RL_Fus).
 
-
-
 ## Demo 005 | 26/11/2021
 Essa demo mostra como fazer a configuração do script para que o mesmo funcione corretamente. Para mais detalhes veja a página sobre [arquitetura](/architecture/#deploy-do-servidor).
 
@@ -93,5 +91,3 @@ Basicamente fala das 3 variáveis necessárias para que o app funcione corretame
 {{<youtube id="XPklr-fdXlE" >}}
 
 **OBS:** Se você estiver com problemas para visualizar o vídeo aqui pela página, clique nesse link: [https://youtu.be/XPklr-fdXlE](https://youtu.be/XPklr-fdXlE).
-
-
